@@ -1,0 +1,32 @@
+{
+    "name": "language-kb",
+    "displayName": "language-kb",
+    "description": "Language support for https://github.com/adri326/lo21-project",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.40.0",
+        "atom": ">0.50.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "kb",
+            "aliases": ["lo21-project", "kb"],
+            "extensions": [".kb"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "kb",
+            "scopeName": "source.kb",
+            "path": "./syntaxes/kb.tmLanguage.json"
+        }]
+    },
+    "activationCommands": {
+      "atom-text-editor": [
+        "language-kb:toggle"
+      ]
+    },
+    "license": "MIT"
+}

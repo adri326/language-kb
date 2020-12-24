@@ -1,0 +1,10 @@
+{
+    ".source.kb": {
+        "editor": {
+            "commentStart": "{",
+            "commendEnd": "}",
+            "increaseIndentPattern": "\\(|\\{",
+            "decreaseIndentPattern": "\\}|\\)"
+        }
+    }
+}

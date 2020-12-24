@@ -1,0 +1,59 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "kb",
+    "fileTypes": ["kb", "knowledgebase"],
+    "patterns": [
+        {"include": "#comment"},
+        {"include": "#parenthesis"},
+        {"include": "#operator"},
+        {"include": "#thus"},
+        {"include": "#symbol"},
+        {"include": "#error"}
+    ],
+    "repository": {
+        "comment": {
+            "begin": "\\{",
+            "beginCaptures": {
+                "0": {"name": "comment.block"}
+            },
+            "end": "\\}",
+            "endCaptures": {
+                "0": {"name": "comment.block"}
+            },
+            "name": "comment.block"
+        },
+        "parenthesis": {
+            "begin": "\\(",
+            "beginCaptures": {
+                "0": {"name": "punctuation.paren.open"}
+            },
+            "end": "\\)",
+            "endCaptures": {
+                "0": {"name": "punctuation.paren.close"}
+            },
+            "name": "expression.group",
+            "patterns": [
+                {"include": "#parenthesis"},
+                {"include": "#operator"},
+                {"include": "#symbol"}
+            ]
+        },
+        "operator": {
+            "match": "&&|\\|\\||!",
+            "name": "keyword.operator"
+        },
+        "thus": {
+            "match": "<?=>",
+            "name": "keyword.control"
+        },
+        "symbol": {
+            "name": "string.quoted.single",
+            "begin": "\"",
+            "end": "\"",
+        },
+        "error": {
+            "match": "error",
+            "name": "keyword.other"
+        }
+    }
+}
