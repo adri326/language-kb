@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "kb",
+    "name": "KnowledgeBase",
     "fileTypes": ["kb", "knowledgebase"],
     "patterns": [
         {"include": "#comment"},
@@ -10,6 +10,7 @@
         {"include": "#symbol"},
         {"include": "#error"}
     ],
+    "scopeName": "source.kb",
     "repository": {
         "comment": {
             "begin": "\\{",
@@ -49,7 +50,7 @@
         "symbol": {
             "name": "string.quoted.single",
             "begin": "\"",
-            "end": "\"",
+            "end": "\""
         },
         "error": {
             "match": "error",

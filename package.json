@@ -13,7 +13,7 @@
     "contributes": {
         "languages": [{
             "id": "kb",
-            "aliases": ["lo21-project", "kb"],
+            "aliases": ["KnowledgeBase", "lo21-project", "knowledgebase"],
             "extensions": [".kb"],
             "configuration": "./language-configuration.json"
         }],
